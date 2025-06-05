@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damodar Jii</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="flame-left"></div>
+            <div class="flame-right"></div>
+            
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="assets/jockey.png" alt="Profile Picture" id="profileImg">
+                </div>
+                
+                <h1 class="profile-name" id="profileName">DAMODAR JII</h1>
+                
+                <p class="profile-description" id="profileDescription">
+                    Damodarjii is the influential Director of Vega City, 
+                    known for his strategic leadership and firm 
+                    control. He plays a vital role in maintaining the 
+                    city's order and shaping its future in 2049.
+                </p>
+                
+                <button class="send-message-btn" onclick="openInstagram()">
+                    Send Message
+                </button>
+            </div>
+        </div>
+        
+<div class="footer">
+    <span>Made with love <a href="https://discord.gg/vega-city-kerala-1218698754052591747" target="_blank" style="color: inherit; text-decoration: underline;">vega team</a></span>
+</div>
+    </div>
+
+    <script>
+        const CONFIG = {
+            profileImage: 'assets/jockey.png',
+            profileName: 'DAMODAR JII',
+            profileDescription: `Damodarjii is the influential Director of Vega City, 
+                known for his strategic leadership and firm 
+                control. He plays a vital role in maintaining the 
+                city's order and shaping its future in 2049.`,
+            instagramUsername: 'damodar.jii'
+        };
+        function initProfile() {
+            document.getElementById('profileImg').src = CONFIG.profileImage;
+            document.getElementById('profileName').textContent = CONFIG.profileName;
+            document.getElementById('profileDescription').textContent = CONFIG.profileDescription;
+        }
+        function openInstagram() {
+            const instagramUrl = `https://www.instagram.com/${CONFIG.instagramUsername}/`;
+            window.open(instagramUrl, '_blank');
+        }
+        document.addEventListener('DOMContentLoaded', initProfile);
+    </script>
+</body>
+</html>
